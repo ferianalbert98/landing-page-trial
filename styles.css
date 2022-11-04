@@ -4,6 +4,8 @@
     --col-blue-bg: royalblue;
     --col-orange-bg: darkorange;
     --col-black-txt: #34282C;
+    --col-brown-bg: #911616;
+    --col-aqua-txt: #89FFDE;
 }
 
 * {
@@ -11,6 +13,13 @@
     margin: 0;
     padding: 0;
 }
+
+#greetings > p > a, footer > p > a {
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
+/* ---------------------------------------------------------------------------------------- */
 
 header {
     background-color: var(--col-almond-bg-txt);
@@ -21,8 +30,6 @@ header {
 
 header > .nav-container {
     background-color: var(--col-green-bg);
-    border: 2px solid transparent;
-    border-radius: 30%;
     padding: 20px 20px;
 }
 
@@ -32,13 +39,14 @@ header > .nav-container > .nav-link {
     margin: 0 15px;
     padding: 10px 10px;
     text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 80%;
     transition: 0.5s;
 }
 
 header > .nav-container > .nav-link.current-page {
     background-color: var(--col-orange-bg);
     color: var(--col-black-txt);
-    font-weight: bold;
 }
 
 header > .nav-container > .nav-link:hover {
@@ -48,6 +56,31 @@ header > .nav-container > .nav-link:hover {
 }
 
 /* ---------------------------------------------------------------------------------------- */
+#greetings {
+    background-color: var(--col-brown-bg);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+#greetings > h1 {
+    color: var(--col-almond-bg-txt);
+    font-size: 56px;
+}
+
+#greetings > p, #greetings > p > a {
+    color: var(--col-aqua-txt);
+    font-size: 24px;
+    font-style: italic;
+    transition: 0.5s;
+}
+
+#greetings > p > a:hover {
+    background-color: var(--col-almond-bg-txt);
+    color: var(--col-black-txt);
+}
 
 
 /* ---------------------------------------------------------------------------------------- */
@@ -60,4 +93,10 @@ footer {
 footer > p, footer > p > a {
     color: var(--col-black-txt);
     font-size: 18px;
+    transition: 0.5s;
+}
+
+footer > p > a:hover {
+    background-color: var(--col-black-txt);
+    color: var(--col-almond-bg-txt);
 }
