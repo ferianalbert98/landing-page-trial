@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="expense-tracker.css">
+        <script src="expense-tracker.js"></script>
+        <title>Landing Page</title>
+    </head>
+    <body>
+        <header>
+            <nav class="nav-container">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="" class="nav-link current-page">Expense Tracker</a>
+                <a href="" class="nav-link">Project 2</a>
+                <a href="" class="nav-link">Project 3</a>
+                <a href="" class="nav-link">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Expense form -->
+            <div class="expense-form">
+                <form action="javascript:void(0)" method="post">
+                    <p>Merchant Name</p>
+                    <input id="merch-name" name="merch-name" type="text" placeholder="The name of the merchant" required>
+                    <p>Merchant Type</p>
+                    <select name="merch-type" id="merch-type" required>
+                        <option value="grocery">Grocery</option>
+                        <option value="fnb">Food and Beverages (F&B)</option>
+                        <option value="gas">Gasoline</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="electric">Electricity Bills</option>
+                        <option value="others">Others</option>
+                        <option value="" selected>-- Please select one --</option>
+                    </select>
+                    <p>Description</p>
+                    <textarea name="merch-desc" id="merch-desc" cols="30" rows="10" placeholder="Description of what you have bought from the merchant"></textarea>
+                    <p>Amount</p>
+                    <input id="merch-price" name="merch-price" type="number" placeholder="Amount you have paid" required>
+                    <br />
+                    <!-- Submit button -->
+                    <input type="submit" value="Add Expenses">
+                </form>
+            </div>
+
+            <!-- Expense list -->
+            <div class="expense-list">
+                <table>
+                    <tr>
+                        <th>Merchant Name</th>
+                        <th>Merchant Type</th>
+                        <th>Transcation Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr>
+                        <td>Alfamart</td>
+                        <td>Groceries</td>
+                        <td><span id="current-date"></span></td>
+                        <script>
+                            const date = new Date();
+                            let day = date.getDate();
+                            let month = date.getMonth() + 1;
+                            let year = date.getFullYear();
+
+                            switch(month) {
+                                case 1: month = "January"; break;
+                                case 2: month = "February"; break;
+                                case 3: month = "March"; break;
+                                case 4: month = "April"; break;
+                                case 5: month = "May"; break;
+                                case 6: month = "June"; break;
+                                case 7: month = "July"; break;
+                                case 8: month = "August"; break;
+                                case 9: month = "September"; break;
+                                case 10: month = "October"; break;
+                                case 11: month = "November"; break;
+                                case 12: month = "December"; break;
+                            }
+
+                            let currDate = `${day} ${month} ${year}`;
+                            document.getElementById("current-date").innerHTML = currDate;
+                        </script>
+                        <td>Bought cooking oil, snacks, and drinks.</td>
+                        <td>68.000</td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+
+        <footer>
+            <p>
+                This website is under development. If you have any suggestions, drop it <a href="">here</a>. Thank you.
+            </p>
+        </footer>
+    </body>
+</html>

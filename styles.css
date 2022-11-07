@@ -107,7 +107,7 @@ header > .nav-container > .nav-link:hover {
 
 .project-container {
     margin: 30px 20px;
-    padding: 10px;
+    padding: 0 10px 10px 10px;
     background-color: var(--col-green-bg);
     overflow: hidden;
     border-radius: 50%;

@@ -1,0 +1,43 @@
+:root {
+    --col-almond-bg-txt: blanchedalmond;
+    --col-green-bg: forestgreen;
+    --col-blue-bg: royalblue;
+    --col-orange-bg: darkorange;
+    --col-black-txt: #34282C;
+    --col-brown-bg: #911616;
+    --col-aqua-txt: #89FFDE;
+    --col-silver-bg: #C0C0C0;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+
+main {
+    background-color: var(--col-silver-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------------------------------------- */
+
+.expense-list {
+    margin: 30px 10px;
+}
+
+.expense-list > table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background-color: var(--col-green-bg);
+    color: var(--col-almond-bg-txt);
+}
+
+td, th {
+    border: 1px solid var(--col-black-txt);
+}
